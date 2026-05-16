@@ -192,6 +192,17 @@ const CATEGORIES = [
   },
 ];
 
+
+
+
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
+
+
+
+
+
 // Flat list for search
 const ALL_SERVICES = CATEGORIES.flatMap(cat =>
   cat.services.map(s => ({ ...s, categoryId: cat.id, categoryName: cat.name }))
