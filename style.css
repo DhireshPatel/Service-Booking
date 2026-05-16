@@ -160,6 +160,11 @@ nav {
         width: 100%;
         justify-content: center;
     } */
+
+    .btn{
+        display: flex;
+        gap: 15px;
+    }
 }
 
 
