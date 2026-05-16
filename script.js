@@ -22,7 +22,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 
-// ─── DATA ─────────────────────────────────────────────────────────────────────
+// DATA 
 const CATEGORIES = [
   {
     id: 'fan',
@@ -204,7 +204,7 @@ const ALL_SERVICES = CATEGORIES.flatMap(cat =>
 
 let cart = [];
 
-// ─── PAGE NAVIGATION ──────────────────────────────────────────────────────────
+// PAGE NAVIGATION 
 function showPage(page) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
@@ -225,7 +225,7 @@ function showPage(page) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ─── RENDER CATEGORIES ────────────────────────────────────────────────────────
+// RENDER CATEGORIES 
 function renderCategories() {
   const section = document.getElementById('servicesSection');
   section.innerHTML = `
@@ -265,7 +265,7 @@ function renderServiceCard(s) {
     `;
 }
 
-// ─── SEARCH ───────────────────────────────────────────────────────────────────
+// SEARCH 
 function handleSearch(query) {
   const q = (query || "").trim().toLowerCase();
   const clearBtn = document.getElementById('searchClear');

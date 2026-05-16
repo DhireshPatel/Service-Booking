@@ -782,6 +782,7 @@ nav {
 @media (max-width: 768px) {
     .cart-layout {
         grid-template-columns: 1fr;
+        width: fit-content;
     }
 }
 
@@ -1327,4 +1328,189 @@ nav {
         font-size: 18px;
     }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   RESPONSIVE - TABLET
+========================= */
+@media (max-width: 992px) {
+
+    .cart-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .order-summary {
+        position: static;
+        width: 100%;
+    }
+
+    .cart-item {
+        padding: 1rem;
+    }
+
+    .summary-row.total .price {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    .cart-layout {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .cart-items {
+        width: 100%;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+        padding: 1rem;
+        border-radius: 14px;
+    }
+
+    .cart-item-top {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        width: 100%;
+    }
+
+    .cart-item-icon {
+        font-size: 1.8rem;
+    }
+
+    .cart-item-info {
+        width: 100%;
+    }
+
+    .cart-item-name {
+        font-size: 0.95rem;
+    }
+
+    .cart-item-desc {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .cart-item-price {
+        margin-right: 0;
+        font-size: 1.5rem;
+    }
+
+    .cart-item-actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .remove-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+
+    /* ORDER SUMMARY */
+    .order-summary {
+        width: 100%;
+        position: static;
+        padding: 1.2rem;
+        border-radius: 14px;
+    }
+
+    .summary-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .summary-row {
+        font-size: 0.9rem;
+    }
+
+    .summary-row.total {
+        font-size: 1rem;
+    }
+
+    .summary-row.total .price {
+        font-size: 1.6rem;
+    }
+
+    .btn-primary {
+        padding: 0.95rem;
+        font-size: 0.95rem;
+        border-radius: 12px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+
+    .cart-layout {
+        gap: 0.8rem;
+    }
+
+    .cart-item {
+        padding: 0.9rem;
+    }
+
+    .cart-item-name {
+        font-size: 0.9rem;
+    }
+
+    .cart-item-desc {
+        font-size: 0.72rem;
+    }
+
+    .cart-item-price {
+        font-size: 1.35rem;
+    }
+
+    .summary-title {
+        font-size: 1.2rem;
+    }
+
+    .summary-row {
+        font-size: 0.82rem;
+    }
+
+    .summary-row.total .price {
+        font-size: 1.4rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 0.9rem;
+    }
 }
