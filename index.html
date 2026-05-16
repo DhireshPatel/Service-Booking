@@ -28,17 +28,19 @@
       </span>SparkPro
     </div>
 
+    <button class="cart-btn" onclick="showPage('cart')">
+      🛒 Cart
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+
     <button class="menu-toggle" onclick="toggleMenu()">
       ☰
     </button>
 
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a class="nav-link active" onclick="showPage('home')">Services</a>
       <a class="nav-link" onclick="showPage('about')">About</a>
-      <button class="cart-btn" onclick="showPage('cart')">
-        🛒 Cart
-        <span class="cart-badge" id="cartBadge">0</span>
-      </button>
+
     </div>
   </nav>
 
@@ -56,7 +58,7 @@
       <div class="search-wrapper">
         <span class="search-icon">🔍</span>
         <input type="text" id="searchInput" class="search-input"
-          placeholder="Search services... e.g. fan, AC, wiring, CCTV" onInput="handleSearch(this.value)"
+          placeholder="Search services... e.g. fan, AC, wiring, CCTV" oninput="handleSearch(this.value)"
           onkeydown="if(event.key==='Escape') clearSearch()" />
         <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
       </div>

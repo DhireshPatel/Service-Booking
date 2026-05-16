@@ -273,7 +273,7 @@ function renderServiceCard(s) {
 
 // ─── SEARCH ───────────────────────────────────────────────────────────────────
 function handleSearch(query) {
-  const q = query.trim().toLowerCase();
+  const q = (query || "").trim().toLowerCase();
   const clearBtn = document.getElementById('searchClear');
   const resultsBox = document.getElementById('searchResults');
 
@@ -643,36 +643,7 @@ ${serviceList}
 
   }
 
-  // ── 2. NOTIFY HANDLER ─────────────────────────────────────────────────────
-  // if (ENABLE_NOTIFY) {
-  //     try {
-  //         const serviceList = cart.map(s => `• ${s.name} (₹${s.price})`).join('\n');
-  //         const message = `🔔 *New SparkPro Booking!*\n\n` +
-  //             `📋 *ID:* ${bookingId}\n` +
-  //             `👤 *Customer:* ${name}\n` +
-  //             `📞 *Phone:* ${phone}\n` +
-  //             `📍 *Address:* ${address}\n` +
-  //             `📅 *Date:* ${date}\n\n` +
-  //             `🔧 *Services:*\n${serviceList}\n\n` +
-  //             `💰 *Total:* ₹${total.toLocaleString()}\n\n` +
-  //             `Please confirm appointment with the customer.`;
-
-  //         await fetch(BACKEND_NOTIFY_URL, {
-  //             method: 'POST',
-  //             headers: { 'Content-Type': 'application/json' },
-  //             body: JSON.stringify({
-  //                 to: HANDLER_PHONE,
-  //                 message,
-  //                 bookingId
-  //             })
-  //         });
-  //     } catch (err) {
-  //         console.error('Notify failed:', err);
-  //         // Non-critical — booking still confirmed
-  //     }
-  // }
-
-  // ── 3. SHOW CONFIRMATION MODAL ────────────────────────────────────────────
+  // 3. SHOW CONFIRMATION MODAL :-
   document.getElementById('bookingId').textContent = `BOOKING ID: #${bookingId}`;
 
   const bookedList = document.getElementById('bookedServicesList');
@@ -725,6 +696,7 @@ function showToast(msg, type = 'success') {
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 renderCategories();
 
+window.toggleMenu = handleSearch;
 window.handleSearch = handleSearch;
 window.clearSearch = clearSearch;
 window.bookNow = bookNow;
