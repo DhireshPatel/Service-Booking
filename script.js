@@ -38,17 +38,17 @@ const CATEGORIES = [
 
         name: 'Ceiling Fan Installation',
         desc: 'Install new ceiling fans with full wiring, mounting, and safety checks.',
-        price: 499,
+        price: 199,
         duration: '45-60 min'
       },
       {
-        id: 3,
+        id: 2,
 
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-fan-icon lucide-fan"><path d="M10.827 16.379a6.082 6.082 0 0 1-8.618-7.002l5.412 1.45a6.082 6.082 0 0 1 7.002-8.618l-1.45 5.412a6.082 6.082 0 0 1 8.618 7.002l-5.412-1.45a6.082 6.082 0 0 1-7.002 8.618l1.45-5.412Z"/><path d="M12 12v.01"/></svg>',
 
         name: 'Exhaust Fan Installation',
         desc: 'Install bathroom/kitchen exhaust fans with proper ventilation wiring',
-        price: 399,
+        price: 199,
         duration: '30-60 min'
       },
     ]
@@ -59,7 +59,7 @@ const CATEGORIES = [
     name: 'AC & Cooling',
     services: [
       {
-        id: 4,
+        id: 3,
 
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-air-vent-icon lucide-air-vent"><path d="M18 17.5a2.5 2.5 0 1 1-4 2.03V12"/><path d="M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 8h12"/><path d="M6.6 15.572A2 2 0 1 0 10 17v-5"/></svg>',
 
@@ -69,13 +69,13 @@ const CATEGORIES = [
         duration: '1-2 hrs'
       },
       {
-        id: 5,
+        id: 4,
 
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-air-vent-icon lucide-air-vent"><path d="M18 17.5a2.5 2.5 0 1 1-4 2.03V12"/><path d="M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 8h12"/><path d="M6.6 15.572A2 2 0 1 0 10 17v-5"/></svg>',
 
         name: 'AC Installation ',
         desc: 'Electrical support for AC mounting, earthing, and dedicated circuit setup.',
-        price: 699,
+        price: 799,
         duration: '1-2 hrs'
       },
     ]
@@ -86,21 +86,21 @@ const CATEGORIES = [
     name: 'Lighting',
     services: [
       {
-        id: 6,
+        id: 5,
 
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb-icon lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>',
 
         name: 'Bulb holder installation',
         desc: 'Install ceiling lights, chandeliers, LEDs, or any light fixture safely and professionally.',
-        price: 799,
+        price: 69,
         duration: '1-2 hrs'
       },
       {
-        id: 7,
+        id: 6,
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb-icon lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>',
         name: 'LED Tube light installation',
         desc: 'Weatherproof outdoor light installation, pathway lights, and garden setups.',
-        price: 99,
+        price: 69,
         duration: '1-2 hrs'
       },
       {
@@ -123,15 +123,15 @@ const CATEGORIES = [
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plug-icon lucide-plug"><path d="M12 22v-5"/><path d="M15 8V2"/><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"/><path d="M9 8V2"/></svg>',
         name: 'Switch Board installation',
         desc: 'Fix or replace faulty power outlets, USB ports, and electrical sockets in your home.',
-        price: 499,
+        price: 139,
         duration: '30-60 min'
       },
       {
         id: 9,
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plug-zap-icon lucide-plug-zap"><path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/><path d="m2 22 3-3"/><path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/><path d="m18 3-4 4h6l-4 4"/></svg>',
-        name: 'New Home Wiring installation',
+        name: 'New Home Wiring installation (per 5m)',
         desc: 'Upgrade your main electrical panel for higher capacity, safety, and modern appliances.',
-        price: 2999,
+        price: `149`,
         duration: '3-5 hrs'
       },
       {
@@ -150,19 +150,19 @@ const CATEGORIES = [
     name: 'RO - Water Purifier ',
     services: [
       {
-        id: 12,
+        id: 11,
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplets-icon lucide-droplets"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>',
         name: 'RO Water Purifier Installation',
         desc: 'Professional installation of home inverters, UPS systems, and battery backups.',
-        price: 1199,
+        price: 399,
         duration: '2-3 hrs'
       },
       {
-        id: 13,
+        id: 12,
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplets-icon lucide-droplets"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>',
         name: 'Compelte RO service',
         desc: 'Complete solar panel electrical wiring, connection, and system integration services.',
-        price: 3499,
+        price: 1499,
         duration: '4-6 hrs'
       },
     ]
@@ -173,11 +173,26 @@ const CATEGORIES = [
     name: 'TV SERVICES',
     services: [
       {
-        id: 14,
+        id: 13,
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tv-minimal-icon lucide-tv-minimal"><path d="M7 21h10"/><rect width="20" height="14" x="2" y="3" rx="2"/></svg>',
         name: 'TV installation',
         desc: 'Power connections, cable management, and electrical work for CCTV / security camera systems.',
         price: 1099,
+        duration: '2-3 hrs'
+      },
+    ]
+  },
+  {
+    id: 'Geyser',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thermometer-sun-icon lucide-thermometer-sun"><path d="M12 2v2"/><path d="M12 8a4 4 0 0 0-1.645 7.647"/><path d="M2 12h2"/><path d="M20 14.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/><path d="m4.93 4.93 1.41 1.41"/><path d="m6.34 17.66-1.41 1.41"/></svg>',
+    name: 'Geyser',
+    services: [
+      {
+        id: 14,
+        icon: '<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thermometer-sun-icon lucide-thermometer-sun"><path d="M12 2v2"/><path d="M12 8a4 4 0 0 0-1.645 7.647"/><path d="M2 12h2"/><path d="M20 14.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/><path d="m4.93 4.93 1.41 1.41"/><path d="m6.34 17.66-1.41 1.41"/></svg>',
+        name: 'Geyser installation',
+        desc: 'Power connections, cable management, and electrical work for CCTV / security camera systems.',
+        price: 399,
         duration: '2-3 hrs'
       },
     ]
@@ -379,20 +394,9 @@ function addToCart(serviceId) {
   // already exists
   if (existingItem) {
 
-    existingItem.qty += 1;
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    // qty update
-    document.getElementById(`qty-${serviceId}`).innerText =
-      existingItem.qty;
-
-    // price update
-    document.getElementById(`price-${serviceId}`).innerText =
-      `₹${(existingItem.price * existingItem.qty).toLocaleString()}`;
-
-    // updateTotal();
-
-    showToast('⚡ Quantity Updated!');
+    showToast(`✓ This service is already in your cart`);
     return;
   }
 
@@ -622,7 +626,7 @@ async function bookNow(total) {
 
 
   const serviceList = cart
-    .map(s => `• ${s.name} - ₹${s.price}`)
+    .map(s => `• ${s.name} x${s.qty} (${s.price}/each) - ₹${(s.price * s.qty).toLocaleString()}`)
     .join('\n');
 
   const telegramMessage =
