@@ -558,7 +558,11 @@ function renderCart() {
                     <div class="form-group">
                         <label class="form-label">Address</label>
                         <input class="form-input" type="text" id="bookingAddress" placeholder="Enter your address" />
+                        <button type="button" class="location-btn" onclick="getCurrentLocation()">
+                        Use current Location
+                        </button>
                     </div>
+                    
                     <div class="form-group">
                         <label class="form-label">Preferred Date</label>
                         <input class="form-input" type="date" id="bookingDate" min="${new Date().toISOString().split('T')[0]}" />
@@ -576,7 +580,68 @@ function renderCart() {
     `;
 }
 
-// ─── BOOK NOW  ───────────────────────────────────────
+// Current Location:-
+
+async function getCurrentLocation() {
+
+  const addressInput = document.getElementById("bookingAddress");
+
+  if (!navigator.geolocation) {
+    showToast("Geolocation is not supported", "warning");
+    return;
+  }
+
+  addressInput.value = "Fetching location...";
+
+  navigator.geolocation.getCurrentPosition(
+
+    async (position) => {
+
+      const lat = position.coords.latitude;
+      const lng = position.coords.longitude;
+
+      try {
+
+        // Reverse Geocoding API
+        const res = await fetch(
+          `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`
+        );
+
+        const data = await res.json();
+
+        const address = data.display_name;
+
+        addressInput.value = address;
+
+        showToast("📍 Location detected!");
+
+      } catch (err) {
+
+        console.log(err);
+
+        addressInput.value = "";
+
+        showToast("Failed to fetch address", "warning");
+      }
+    },
+
+    (error) => {
+
+      console.log(error);
+
+      addressInput.value = "";
+
+      showToast("Location permission denied", "warning");
+    }
+
+  );
+}
+
+
+
+
+
+// BOOK NOW :-  
 async function bookNow(total) {
   const name = document.getElementById('bookingName')?.value?.trim();
   const phone = document.getElementById('bookingPhone')?.value?.trim();
@@ -725,6 +790,7 @@ renderCategories();
 window.toggleMenu = handleSearch;
 window.handleSearch = handleSearch;
 window.clearSearch = clearSearch;
+window.getCurrentLocation = getCurrentLocation;
 window.bookNow = bookNow;
 window.addToCart = addToCart;
 window.changeQty = changeQty;
