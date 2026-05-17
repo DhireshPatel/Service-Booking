@@ -131,7 +131,7 @@ nav {
     .nav-links {
         position: absolute;
         top: 64px;
-        left: 0;
+        right: 0;
         width: 100%;
         background: rgba(10, 10, 15, 0.98);
         backdrop-filter: blur(20px);
@@ -149,7 +149,8 @@ nav {
     }
 
     .show {
-        /* background-color: #fff; */
+        background: rgba(41, 41, 56, 0.589);
+        border-radius: 0 0 0 20px;
         display: block;
         width: 130px;
     }

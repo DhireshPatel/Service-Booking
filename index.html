@@ -15,7 +15,7 @@
 
   <!-- NAVBAR -->
   <nav>
-    <div class="logo">
+    <div class="logo" >
       <span class="logo-icon">
 
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
@@ -30,7 +30,13 @@
 
     <div class="btn">
       <button class="cart-btn" onclick="showPage('cart')">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>Cart
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff"
+          stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-shopping-cart-icon lucide-shopping-cart">
+          <circle cx="8" cy="21" r="1" />
+          <circle cx="19" cy="21" r="1" />
+          <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+        </svg>Cart
         <span class="cart-badge" id="cartBadge">0</span>
       </button>
 
@@ -39,7 +45,7 @@
       </button>
     </div>
 
-    <div class="nav-links show" id="navLinks">
+    <div class="nav-links" id="navLinks">
       <a class="nav-link active" onclick="showPage('home')">Services</a>
       <a class="nav-link" onclick="showPage('about')">About</a>
 
@@ -57,11 +63,15 @@
       <!-- SEARCH BOX -->
       <div class="search-wrapper">
         <span class="search-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="#ffffff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-search-icon lucide-search">
+            <path d="m21 21-4.34-4.34" />
+            <circle cx="11" cy="11" r="8" />
+          </svg>
         </span>
-        <input type="text" id="searchInput" class="search-input"
-          placeholder="Search services... e.g. fan, AC, RO " oninput="handleSearch(this.value)"
-          onkeydown="if(event.key==='Escape') clearSearch()" />
+        <input type="text" id="searchInput" class="search-input" placeholder="Search services... e.g. fan, AC, RO "
+          oninput="handleSearch(this.value)" onkeydown="if(event.key==='Escape') clearSearch()" />
         <button class="search-clear" id="searchClear" onclick="clearSearch()">✕</button>
       </div>
 
