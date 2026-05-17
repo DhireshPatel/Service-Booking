@@ -741,7 +741,8 @@ ${serviceList}
         <div class="booked-service-item">
             <span class="check">✓</span>
             <span>${s.icon} ${s.name}</span>
-            <span style="margin-left:auto;color:var(--accent)">₹${(s.price * s.qty).toLocaleString()}</span>
+            
+            <span style="margin-left:auto;color:var(--accent)"><span>quantity-${s.qty}</span>, <span>${s.price}/each</span>,  ₹${(s.price * s.qty).toLocaleString()}</span>
         </div>
     `).join('') + `
         <div class="booked-service-item" style="font-weight:600;color:var(--text)">

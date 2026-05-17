@@ -1044,7 +1044,7 @@ nav {
 .modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0,0,0,0.8);
     backdrop-filter: blur(8px);
     z-index: 1000;
     display: flex;
@@ -1053,14 +1053,10 @@ nav {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s;
-}
+  }
+  .modal-overlay.show { opacity: 1; pointer-events: all; }
 
-.modal-overlay.show {
-    opacity: 1;
-    pointer-events: all;
-}
-
-.modal {
+  .modal {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 20px;
@@ -1069,17 +1065,14 @@ nav {
     width: 90%;
     text-align: center;
     transform: scale(0.9) translateY(20px);
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
+    transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  .modal-overlay.show .modal { transform: scale(1) translateY(0); }
 
-.modal-overlay.show .modal {
-    transform: scale(1) translateY(0);
-}
-
-.modal-success-icon {
+  .modal-success-icon {
     width: 72px;
     height: 72px;
-    background: rgba(45, 212, 167, 0.15);
+    background: rgba(45,212,167,0.15);
     border: 2px solid var(--success);
     border-radius: 50%;
     display: flex;
@@ -1088,35 +1081,23 @@ nav {
     font-size: 2rem;
     margin: 0 auto 1.5rem;
     animation: pulse 2s infinite;
-}
+  }
 
-@keyframes pulse {
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(45,212,167,0.3); }
+    50% { box-shadow: 0 0 0 12px rgba(45,212,167,0); }
+  }
 
-    0%,
-    100% {
-        box-shadow: 0 0 0 0 rgba(45, 212, 167, 0.3);
-    }
-
-    50% {
-        box-shadow: 0 0 0 12px rgba(45, 212, 167, 0);
-    }
-}
-
-.modal h2 {
+  .modal h2 {
     font-family: 'Bebas Neue', cursive;
     font-size: 2rem;
     letter-spacing: 2px;
     margin-bottom: 0.5rem;
-}
+  }
 
-.modal p {
-    color: var(--muted);
-    font-size: 0.9rem;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-}
+  .modal p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem; }
 
-.booking-id {
+  .booking-id {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -1125,14 +1106,10 @@ nav {
     font-size: 0.85rem;
     color: var(--accent);
     margin-bottom: 1.5rem;
-}
+  }
 
-.booked-services {
-    text-align: left;
-    margin-bottom: 1.5rem;
-}
-
-.booked-service-item {
+  .booked-services { text-align: left; margin-bottom: 1.5rem; }
+  .booked-service-item {
     display: flex;
     align-items: center;
     gap: 0.6rem;
@@ -1140,15 +1117,9 @@ nav {
     border-bottom: 1px solid var(--border);
     font-size: 0.85rem;
     color: var(--muted);
-}
-
-.booked-service-item:last-child {
-    border-bottom: none;
-}
-
-.booked-service-item .check {
-    color: var(--success);
-}
+  }
+  .booked-service-item:last-child { border-bottom: none; }
+  .booked-service-item .check { color: var(--success); }
 
 /* TOAST */
 .toast {
