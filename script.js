@@ -189,12 +189,6 @@ menutoggle.addEventListener("click", function () {
   navLinks.classList.toggle("show");
 })
 
-// function toggleMenu() {
-//   document.getElementById("navLinks").classList.toggle("nav-links");
-// }
-
-
-
 
 
 // Flat list for search
@@ -203,6 +197,28 @@ const ALL_SERVICES = CATEGORIES.flatMap(cat =>
 );
 
 let cart = [];
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  const savedCart = localStorage.getItem('cart');
+
+  if (savedCart) {
+    cart = JSON.parse(savedCart);
+  }
+
+  renderCart();
+  updateCartBadge();
+
+});
+
+
+
+
+
+
+
 
 // PAGE NAVIGATION 
 function showPage(page) {
@@ -364,6 +380,7 @@ function addToCart(serviceId) {
   if (existingItem) {
 
     existingItem.qty += 1;
+    localStorage.setItem('cart', JSON.stringify(cart));
 
     // qty update
     document.getElementById(`qty-${serviceId}`).innerText =
@@ -384,6 +401,8 @@ function addToCart(serviceId) {
     ...service,
     qty: 1
   });
+
+  localStorage.setItem('cart', JSON.stringify(cart));
 
   updateCartBadge();
 
@@ -406,6 +425,8 @@ function changeQty(id, change) {
 
   item.qty += change;
 
+  localStorage.setItem('cart', JSON.stringify(cart));
+
   // remove item if qty becomes 0
   if (item.qty <= 0) {
     removeFromCart(id);
@@ -418,6 +439,9 @@ function changeQty(id, change) {
 
 function removeFromCart(serviceId) {
   cart = cart.filter(c => c.id !== serviceId);
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+
   updateCartBadge();
   renderCart();
 
@@ -675,6 +699,7 @@ function setStatus(box, type, msg) {
 function closeModal() {
   document.getElementById('modalOverlay').classList.remove('show');
   cart = [];
+  localStorage.removeItem('cart');
   updateCartBadge();
   renderCategories(); // re-render to reset all add buttons
   showPage('home');
