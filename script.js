@@ -746,8 +746,14 @@ ${serviceList}
         </div>
     `).join('') + `
         <div class="booked-service-item" style="font-weight:600;color:var(--text)">
-            <span></span><span>Total</span>
-            <span style="margin-left:auto;color:var(--accent);font-family:'Bebas Neue',cursive;font-size:1.2rem">₹${total.toLocaleString()}</span>
+            <span></span>
+            <span>Total</span>
+            <span style="margin-left:auto;
+              color:var(--accent);
+              font-family:'Bebas Neue',cursive;
+              font-size:1.2rem">
+              ₹${total.toLocaleString()}
+            </span>
         </div>
     `;
 
